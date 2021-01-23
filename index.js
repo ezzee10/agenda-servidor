@@ -16,7 +16,11 @@ app.use(cors());
 app.use(express.json({extended:true}));
 
 //Rutas
-app.use('/api/contactos', require('./routes/contacto'));
+app.use('/api/proyectos', require('./routes/proyecto'));
+
+app.use('/api/managers', require('./routes/manager'));
+
+app.use('/api/asignados', require('./routes/asignado'));
 
 //puerto de la app
 const port = process.env.PORT || 4000;
